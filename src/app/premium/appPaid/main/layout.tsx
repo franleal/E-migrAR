@@ -7,14 +7,5 @@ export const metadata = {
 }
 
 export default function RootLayout({children,}: {children: React.ReactNode}) {
-  return (
-    <html>
-      <body>
-        <Providers>
-          <Navbar/>
-          {children}
-        </Providers>
-      </body>
-    </html>
-  )
+  return <>{children}</>;
 }

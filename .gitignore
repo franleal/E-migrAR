@@ -39,3 +39,71 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+
+
+# ========================
+# 🚫 ARCHIVOS DEL SISTEMA
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# 🧱 DEPENDENCIAS
+# ========================
+
+.pnpm-store/
+yarn.lock
+package-lock.json
+npm-debug.log*
+
+
+# ========================
+# ⚙️ NEXT.JS Y BUILD
+# ========================
+*.log
+*.tmp
+
+# ========================
+# 🧰 TYPESCRIPT / COMPILADOS
+# ========================
+*.tsbuildinfo
+dist/
+build/
+
+# ========================
+# 🗃️ PRISMA
+# ========================
+# Archivos generados automáticamente
+prisma/dev.db
+prisma/dev.db-journal
+generated/
+*.sqlite
+*.db-journal
+/generated/prisma
+
+# ========================
+# 🔐 VARIABLES DE ENTORNO
+# ========================
+.env
+.env.local
+.env.development
+.env.production
+
+# ========================
+# 📨 EMAIL / RESEND / API KEYS
+# ========================
+# Claves y credenciales sensibles
+.resend/
+resend.key
+api.key
+
+# ========================
+# ⚡ SISTEMAS / CACHE
+# ========================
+.vscode/
+.idea/
+.cache/
+coverage/
+
