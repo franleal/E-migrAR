@@ -1,5 +1,7 @@
-import Navbar from "@/components/navbarLanding";
+
 import Providers from "@/components/providers";
+import "./globals.css";
+
 
 export const metadata = {
   title: 'Next.js',
@@ -11,7 +13,6 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
     <html>
       <body>
         <Providers>
-          <Navbar/>
           {children}
         </Providers>
       </body>

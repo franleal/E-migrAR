@@ -2,6 +2,8 @@
 import type {User} from "@/types" ;
 import LandingPage from "./landingPage";
 
+import Slider from "@/components/slider";
+
 function Users(u:User){
     return(
         <div>
@@ -17,6 +19,8 @@ function Users(u:User){
     
 };
 
+
+
 export default function Page(){
     const users: User = {
         id :"1",
@@ -29,7 +33,9 @@ export default function Page(){
 
     return(
         <>
-            <LandingPage/>
+            
+            <Slider/>
+            <LandingPage/>  
             <h1>Usuarios</h1>
             <Users{...users}/>
         </>
