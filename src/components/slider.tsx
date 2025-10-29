@@ -32,19 +32,19 @@ export default function Slider(){
                     src={src}
                     alt={`Slide ${index + 1}`}
                     fill
-                    className={`object-cover transition-opacity duration-1000 ${
+                    className={`object-cover object-center transition-opacity duration-1000 ${
                         index === current ? "opacity-100" : "opacity-0"
                     }`}
                 />
             ))}
             <div className="w-full h-120 bg-black/50 z-20 absolute">
                 <Navbar/>
-                <div className=" w-full h-full m-auto flex flex-col justify-center items-center text-white">
-                    <h1 className="text-6xl">E-migrAr</h1>
-                    <h2 className="text-3xl">Asesoría migratoria para una llegada segura y sin errores a Argentina</h2>
+                <div className=" w-full h-full m-auto flex flex-col  items-center text-white">
+                    <h1 className="text-6xl mb-10">E-migrAr</h1>
+                    <h2 className="text-3xl mb-10">Asesoría migratoria para una llegada segura y sin errores a Argentina</h2>
                     <div className="flex flex-row w-150 justify-center">
-                        <button className="mr-10 text-xl">Mas info</button>
-                        <button className="text-xl">Suscribbirse</button>
+                        <button className="w-50 mr-10 text-xl bg-white/10 rounded-xl border-2 border-[#3366CC] hover:bg-white/20 hover:shadow-lg hover:shadow-blue-500/50">Mas info</button>
+                        <button className="w-50 text-xl rounded-xl bg-[#3366CC] hover:bg-[#5d8dee] hover:shadow-lg hover:shadow-blue-500/50">Suscribbirse</button>
                     </div>
                 </div>
             </div>
