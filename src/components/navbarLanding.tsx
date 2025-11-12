@@ -10,9 +10,9 @@ export default function Navbar(){
                 <div className="m-5">
                     <Link href="/marketing" className="p-2 text-white">Home</Link>
                     <Link href="/login" className="p-2 text-white">Login</Link>
-                    <Link href="/register" className="p-2 text-white">register</Link>
+                    <Link href="/register" className="p-2 text-white">Register</Link>
+                    <Link href="/premium/appPaid" className="p-2 text-white">Consultoria</Link>
                 </div>
-
             </nav>
         </>
               

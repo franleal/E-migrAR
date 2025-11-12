@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from "react"
+import { ButtonHTMLAttributes, ReactNode } from "react"
 
 export type User = {
     name:string
@@ -11,3 +11,11 @@ export type User = {
 export type PaymentStatus = "pending" | "approved" | "rejected"
 
 export type ButtonType = {label: string} & ButtonHTMLAttributes<HTMLButtonElement>
+
+
+export type SliderType = { 
+    title: string;
+    subtitle: string;
+    buttons?: { label: string; href?: string }[];
+    children?: ReactNode; 
+}

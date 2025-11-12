@@ -3,6 +3,8 @@ import { useEffect,useState } from "react"
 import Image from "next/image";
 import Navbar from "@/components/navbarLanding";
 
+import { SliderType } from "@/types";
+
 const images = [
     "/images/slider/img1.jpg",
     "/images/slider/img2.jpg",
@@ -12,7 +14,7 @@ const images = [
 
 ] 
 
-export default function Slider(){
+export default function Slider({title,subtitle,buttons,children}:SliderType){
 
     const [current,setCurrent]= useState(0)
     
@@ -38,14 +40,22 @@ export default function Slider(){
                 />
             ))}
             <div className="w-full h-120 bg-black/60 z-20 absolute">
-                <Navbar/>
-                <div className=" w-full h-full m-auto flex flex-col  items-center text-white">
-                    <h1 className="text-6xl mb-10">E-migrAr</h1>
-                    <h2 className="text-3xl mb-10">Asesoría migratoria para una llegada segura y sin errores a Argentina</h2>
-                    <div className="flex flex-row w-150 justify-center">
-                        <button className="w-50 mr-10 text-xl bg-white/10 rounded-xl border-2 border-[#3366CC] hover:bg-white/20 hover:shadow-lg hover:shadow-blue-500/50">Mas info →</button>
-                        <button className="w-50 text-xl rounded-xl bg-[#3366CC] hover:bg-[#5d8dee] hover:shadow-lg hover:shadow-blue-500/50">Suscribbirse</button>
-                    </div>
+                {children && <div className="absolute inset-x-0 top-0 z-20">{children}</div>}
+                <div className=" w-full h-full m-auto flex flex-col  items-center text-white pt-30">
+                    <h1 className="text-6xl mb-10">{title}</h1>
+                    <h2 className="text-3xl mb-10">{subtitle}</h2>
+                    {buttons && (
+                        <div className="flex flex-wrap gap-4 justify-center">
+                            {buttons.map((b, i) => (
+                                <button
+                                    key={i}
+                                    className="w-40 py-2 px-3 text-lg rounded-xl bg-[#3366CC] hover:bg-[#5d8dee] hover:shadow-lg hover:shadow-blue-500/50"
+                                >
+                                    {b.label}
+                                </button>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

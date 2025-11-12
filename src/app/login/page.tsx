@@ -41,7 +41,7 @@ export default function Login(){
             }else{
                 const sess = await getSession();
                 console.log("Usuario:", sess?.user);
-                router.replace("/premium/appPaid/main")
+                router.replace("/premium/appPaid")
             }
 
         }catch(e){
