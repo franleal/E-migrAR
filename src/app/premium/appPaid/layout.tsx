@@ -9,10 +9,9 @@ export default function RootLayout({children,}: {children: React.ReactNode}) {
   return <>
     <Slider
         title="E-migrAR"
-        subtitle="Asesoría migratoria para una llegada segura y sin errores a Argentina"
+        subtitle="Comenza tu asesoría migratoria ahora"
         buttons={[
-            { label: "Contactarse" },
-                      
+            { label: "Contactarse" , href: "/premium/appPaid/contact"}
         ]}>
                               
         <NavbarPremium/>

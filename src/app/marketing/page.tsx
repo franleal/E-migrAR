@@ -12,8 +12,8 @@ export default function Page(){
                 title="E-migrAR"
                 subtitle="Asesoría migratoria para una llegada segura y sin errores a Argentina"
                 buttons={[
-                    { label: "Más info" },
-                    { label: "Suscribirse" },
+                    { label: "Más info" , href:"#info"},
+                    { label: "Suscribirse", href:"#planes" },
                 ]}>
                 
                 <Navbar/>

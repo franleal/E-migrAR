@@ -1,6 +1,6 @@
 export default function Plans(){
     return(
-        <div className="relative isolate bg-blue-900 px-6 py-24 sm:py-32 lg:px-8">
+        <div id="planes" className="relative  isolate bg-blue-900 px-6 py-24 sm:py-32 lg:px-8">
             <div aria-hidden="true" className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
                 <div className="mx-auto aspect-1155/678 w-288.75 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-20"></div>
             </div>

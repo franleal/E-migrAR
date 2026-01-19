@@ -125,4 +125,13 @@
 body{
   background-color: #ebeaea;
   z-index: -3;
+  width:100%;
+  overflow-x: hidden;
 }
+
+html {
+  scroll-behavior:smooth;
+}
+/* * {
+  outline: 1px solid red;
+} */

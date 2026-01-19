@@ -1,9 +1,11 @@
 import { Resend } from "resend";
+import { email } from "zod";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEnv = process.env.EMAIL_FROM;
 if (!fromEnv) throw new Error("❌ Falta EMAIL_FROM en .env");
 const FROM: string = fromEnv;
+
 
 export async function sendWelcomeEmail(to: string, name?: string){
     try{
@@ -22,3 +24,4 @@ export async function sendWelcomeEmail(to: string, name?: string){
         console.error("❌ Error enviando correo:", err);
     }
 }
+

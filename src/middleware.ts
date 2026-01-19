@@ -8,7 +8,7 @@ export async function middleware(req: NextRequest) {
     const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
     console.log("Token: ",token)
     if (!token) {
-        const url = new URL("/login", req.url); // redirigimos al login
+        const url = new URL("/auth/login", req.url); // redirigimos al login
         url.searchParams.set("from", req.nextUrl.pathname); // opcional: recordar a dónde quería ir
         return NextResponse.redirect(url);
     }

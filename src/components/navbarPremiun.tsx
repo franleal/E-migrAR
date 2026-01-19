@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { signOut } from "next-auth/react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -10,15 +11,15 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
-import { signOut } from "next-auth/react";
+
 
 export default function NavbarPremium(){
     return(
         <>
-            <nav className="w-full  h-30 flex flex-row justify-between items-center p-5 z-30 text-white">
+            <nav className="w-full h-30 flex flex-row justify-between items-center p-5 z-30 text-white">
                 <Image src="/images/logo/logo.jpeg" alt="logo e-migrar" width={100} height={100} className="rounded-full mt-2"/>
                 <div className="m-5">
-                    <Link href="/premium/appPaid" className="p-2">Home</Link>
+                    <Link href="/premium/appPaid" className="relative p-2 after:content-[''] after:absolute after:bg-[#5d8dee] after:h-[2px] after:w-0 after:left-0 after:bottom-0 after:transition-all after:duration-500 hover:after:w-full">Home</Link>
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
                             <Button
@@ -67,7 +68,7 @@ export default function NavbarPremium(){
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
-                    <Link href="/login" className="p-2" onClick={() => signOut({ callbackUrl: "/" })}>Logout</Link>
+                    <Link href="/marketing" className="relative p-2 after:content-[''] after:absolute after:bg-[#5d8dee] after:h-[2px] after:w-0 after:left-0 after:bottom-0 after:transition-all after:duration-500 hover:after:w-full" onClick={() => signOut({ callbackUrl: "/marketing" })}>Logout</Link>
                     
                 </div>
             </nav>
