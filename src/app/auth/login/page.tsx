@@ -57,7 +57,7 @@ export default function Login(){
     return( 
         <>
             <div className="w-[95%] md:w-[80%] md:h-200 h-auto bg-[#F9FAFB] flex flex-col md:flex-row p-5 rounded-xl m-auto shadow-xl shadow-black-500">
-                <div className="relative w-full md:w-[50%] h-[380px] md:h-auto min-h-[420px]">
+                <div className="relative w-full md:w-[50%] h-[380px] md:h-auto min-h-[420px] mb-[20px] md:m-0">
                     <Image
                         src="/images/general/img6.jpg"
                         alt="loginImage"

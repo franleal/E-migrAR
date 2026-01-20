@@ -26,8 +26,8 @@ export default function LandingPage(){
                                     
                 </div>
                 <div className="w-full md:px-6 md:m-15 p-0 m-0 mt-[30px] mb-[30px]">
-                    <h4 id="info" className="md:text-5xl text-2xl w-full p-0 mt-[15px]">Lo que hacemos</h4>
-                    <ul className="list-none p-0 m-0 text-md max-w-full">
+                    <h4 id="info" className="md:text-5xl text-2xl w-full p-0 mt-[15px] ml-[10px]">Lo que hacemos</h4>
+                    <ul className="list-none p-0 m-0 text-md max-w-full ml-[10px]">
                         <li className="mt-5" id="li1">-Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum dolores quod necessitatibus ut maiores velit, repellat sint quibusdam nulla quam ducimus consequuntur, sunt nostrum obcaecati, delectus quaerat sapiente illum.</li>
                         <li className="mt-5" id="li2">-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia iusto amet eius numquam! Blanditiis nobis sed, facilis a hic sapiente recusandae officiis! Similique aspernatur dolores atque labore sunt vitae eaque.</li>
                         <li className="mt-5" id="li3">-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cumque et, doloribus ad non accusantium praesentium eveniet nostrum. Quisquam odio minima, quod eveniet illo placeat fugit molestias aliquam natus maxime.</li>

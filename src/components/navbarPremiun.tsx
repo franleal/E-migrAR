@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { signOut } from "next-auth/react";
+import { useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -14,11 +15,20 @@ import {
 
 
 export default function NavbarPremium(){
+    const [open, setOpen] = useState(false);
+
     return(
         <>
             <nav className="w-full h-30 flex flex-row justify-between items-center p-5 z-30 text-white">
                 <Image src="/images/logo/logo.jpeg" alt="logo e-migrar" width={100} height={100} className="rounded-full mt-2"/>
-                <div className="m-5">
+                <div className={`
+                absolute top-20 right-4
+                w-56 backdrop-blur-md
+                flex flex-col items-center gap-4 p-5
+                transition-all duration-300
+                 ${open ? "block" : "hidden"}
+                    md:static md:bg-transparent md:flex md:flex-row md:justify-end md:items-center md:h-30 md:backdrop-blur-none
+                `}>
                     <Link href="/premium/appPaid" className="relative p-2 after:content-[''] after:absolute after:bg-[#5d8dee] after:h-[2px] after:w-0 after:left-0 after:bottom-0 after:transition-all after:duration-500 hover:after:w-full">Home</Link>
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
@@ -71,6 +81,12 @@ export default function NavbarPremium(){
                     <Link href="/marketing" className="relative p-2 after:content-[''] after:absolute after:bg-[#5d8dee] after:h-[2px] after:w-0 after:left-0 after:bottom-0 after:transition-all after:duration-500 hover:after:w-full" onClick={() => signOut({ callbackUrl: "/marketing" })}>Logout</Link>
                     
                 </div>
+                <button
+                    onClick={() => setOpen(!open)}
+                    className="md:hidden text-2xl"
+                >
+                    ☰
+                </button>
             </nav>
         </>
               

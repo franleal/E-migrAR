@@ -36,8 +36,8 @@ export default function Register(){
 
     return(
         <>  
-            <div className="w-[80%] h-200 bg-[#F9FAFB] flex flex-row p-5 rounded-xl m-auto shadow-xl shadow-black-500">
-                <div className="relative w-[50%] h-[380px] md:h-auto min-h-[420px]">
+            <div className="w-[95%] md:w-[80%] md:h-200 h-auto bg-[#F9FAFB] flex flex-col md:flex-row p-5 rounded-xl m-auto shadow-xl shadow-black-500">
+                <div className="relative w-full md:w-[50%] h-[380px] md:h-auto min-h-[420px] mb-[20px] md:m-0">
                     <Image
                         src="/images/general/img6.jpg"
                         alt="loginImage"
@@ -47,7 +47,7 @@ export default function Register(){
                     />
 
                     <div className="relative text-white flex flex-col items-center z-20">
-                        <h1 className="text-6xl mb-30 mt-20">Bienvenido a E-migrar</h1>
+                        <h1 className="text-4xl md:text-6xl mb-30 mt-20">Bienvenido a E-migrar</h1>
                         <h3 className="text-2xl md:text-3xl font-bold drop-shadow">
                             Asesoría migratoria confiable
                         </h3>
@@ -58,7 +58,7 @@ export default function Register(){
                     <div className="absolute inset-0 bg-black/35 rounded-xl z-10"/>
                 </div>
                         
-                <form action=""  onSubmit={handleSubmit(onsubmit, onError)} className="w-[50%] h-full flex flex-col justify-center items-center bg-[#F9FAFB]">
+                <form action=""  onSubmit={handleSubmit(onsubmit, onError)} className="w-full  md:w-[50%] h-auto flex flex-col justify-center items-center bg-[#F9FAFB]">
                     <h2 className="text-5xl mb-10">Register</h2>
                         {errors.name && <p style={{ color: "crimson" }}>{errors.name.message}</p>}
                     <input type="text" {...register("name", {required:true})} placeholder="Nombre"className="mb-10 h-10 w-[70%] border-b-2 border-b-black focus:outline-none"/>
